@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Uncutsans, sans-serif';
+    color: #f6f6f6;
+    line-height: 1.6;
+    background-color: #273353;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Animation for nav */
+nav {
+    background-color: #273353;
+    padding: 10px 0;
+    border-radius: 3%;
+    animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Nav items */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Space between the list items */
+    justify-content: center; /* Center the nav items horizontally */
+    padding: 0; /* Remove default padding */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+nav a {
+    color: white;
+    font-size: large;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #7AB2D3;
+    border-radius: 5px;
+}
+
+/* Header styling */
+header h1 a {
+    font-size: 2.5rem;
+    font-family: 'Uncutsans, sans-serif';
+    color: #2088c5;
+    text-align: center;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Link styling */
+a {
+    color: #f9fafa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FF6347;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #94c0d8;
+}
+
+/* Main content */
+main {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+li {
+    list-style-type: none;
+}
+
+#summary .athlete {
+    display: inline;
+    background-color: transparent; /* or any other color you prefer */
+    margin-bottom: 0; /* Adjust as necessary */
+    padding: 0; /* Adjust as necessary */
+    box-shadow: none; /* Remove shadow */
+    transition: none; /* Disable transitions */
+}
+/* Table styling */
+.table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #4A628A;
+    box-shadow: 0 4px 8px rgba(59, 48, 48, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #f6f6f6;
+    backdrop-filter: blur(4px);
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background-color: rgba(50, 57, 98, 0.3);
+    color: #fcfafa;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    tr:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transition: background-color 0.3s ease;
+    }
+}
+
+/* Athlete card styling */
+.athlete {
+    display: inline-grid;
+    background-color: rgba(255, 255, 255, 0.1);
+    gap: 30px;
+    margin-bottom: 20px;
+    padding: 12px;
+    min-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 4px 4px rgba(209, 209, 209, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.athlete:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(209, 209, 209, 0.4);
+}
+
+.athlete img {
+    object-fit: cover;
+    border-radius: 16px;
+    width: 150px;
+    height: 150px;
+    
+}
+
+.athlete dl {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 10px;
+    width: 50%;
+}
+
+.athlete dt {
+    font-weight: bold;
+    color: rgba(252, 252, 252, 0.8);
+}
+
+.athlete dd {
+    margin-left: 0;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* Athlete hover animation */
+.athlete {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.athlete:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(209, 209, 209, 0.6);
+}
+
+#gallery {
+    margin: 20px 0;
+    text-align: center; /* Center-aligns the heading and image container */
+}
+
+#gallery h2 {
+    margin-bottom: 20px; /* Space between the heading and images */
+    font-size: 24px; /* Adjust font size as needed */
+}
+
+.image-container {
+    display: flex; /* Use flexbox for horizontal alignment */
+    row-gap: 10px;
+    column-gap: 10px;
+    justify-content: center; /* Center the images */
+    flex-wrap: wrap; /* Allow wrapping of images to next line if necessary */
+}
+
+#gallery img {
+    width: 200px; /* Fixed width for images */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+/* Footer styling */
+footer {
+    background-color: #273353;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Smooth transition for row hover */
+tr {
+    transition: background-color 0.3s ease-in-out;
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.content {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Slightly moved down */
+    animation: fadeInUp 1s ease-in-out 0.5s forwards; /* 0.5s delay */
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeInEffect 1s ease-in forwards;
+}
+
+@keyframes fadeInEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Start slightly lower */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Move to natural position */
+    }
+}
+@media (prefers-reduced-motion) {
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 0;
+        }
+    }
+}
